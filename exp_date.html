@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function(){
+	var today  = new Date();
+	document.getElementById('today').innerHTML = moment().format("DD-MMM-YYYY");
+	document.getElementById('exp1').innerHTML = moment().add(1, 'year').subtract(1, 'days').format("DD-MMM-YYYY");
+	document.getElementById('exp2').innerHTML = moment().add(21, 'days').format("DD-MMM-YYYY");
+	document.getElementById('exp3').innerHTML = moment().add(21, 'days').format("DD-MMM-YYYY");
+	document.getElementById('exp4').innerHTML = moment().add(21, 'days').format("DD-MMM-YYYY");
+	
+	document.getElementById('batch1').innerHTML = 1 + moment().format("DDMMYY");
+	document.getElementById('batch2').innerHTML = 2 + moment().format("DDMMYY");
+	document.getElementById('batch3').innerHTML = 3 + moment().format("DDMMYY");
+	document.getElementById('batch4').innerHTML = 4 + moment().format("DDMMYY");
+};
+        
+</Script>
+<body>
+
+<div class="w3-container w3-green">
+  <h1>Expiry Dates</h1>
+  <p>Today: <span id="today"></span></p>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-third">
+    <p>
+		<b><u>CFC Powder</u></b><br>
+		Batch: <span id="batch1"></span><br>
+		Expiry: <span id="exp1"></span>
+	</p>
+	<hr>
+	<p>
+		<b><u>100 ml Decoction</u></b><br>
+		Batch: <span id="batch2"></span><br>
+		Expiry: <span id="exp2"></span>
+	</p>
+	<hr>
+	<p>
+		<b><u>250 ml Decoction</u></b><br>
+		Batch: <span id="batch3"></span><br>
+		Expiry: <span id="exp3"></span>
+	</p>
+	<hr>
+	<p>
+		<b><u>1 Litre Decoction</u></b><br>
+		Batch: <span id="batch4"></span><br>
+		Expiry: <span id="exp4"></span>
+	</p>
+	<hr>
+   </div>
+</div>
+</body>
+</html>
